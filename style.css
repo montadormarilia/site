@@ -1,0 +1,482 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+.responsive{
+  color: #c40f0f;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+
+}
+.horario{
+  color: #0c0c0c;
+  border-radius: 20px;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  
+}
+ #divfixed{
+
+  z-index: +1;
+  align-items:top;
+  position:absolute;
+  bottom: 560px;
+  margin: 0 10px;
+  background-color: rgb(89, 245, 122);
+  width: 140px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.6s all;
+ }
+ @media screen and (max-width: 800px){
+  #divfixed{
+  z-index: +1;
+  align-items:top;
+  position:absolute;
+  bottom: 860px;
+  margin: 0 10px;
+  background-color: rgb(89, 245, 122);
+  width: 180px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 0.6s all;
+  } 
+ }
+ #divfixed.shrink{
+  width: 40px;
+  transition: 0.5s all;
+  overflow: hidden;
+ }
+ #divfixed img{
+  width: 40px;
+  height: 40px;
+ }
+
+ #divfixed a .flex-itens{
+    display: flex;
+    align-items: center;
+    width: 12px;
+ }
+ #divfixed a .flex-itens span{
+  display: block;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  color: #040305;
+  margin-left: 5px;
+  font-size: 17px;
+  min-width: 180px;
+ }
+ .flutuar{
+  animation-name: flutuar;
+  animation-duration: 0.7s;
+  animation-iteration-count:infinite ;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+ }
+
+ @keyframes flutuar{
+  from{
+    transform: translate3d(0, 0, 0);
+    filter: brightness(100%);
+  }
+  to{
+    transform: translate3d(0, -15px, 0);
+    filter: brightness(130%);
+  }
+ }
+
+header {
+  width: 100%;
+}
+@media screen and (max-width: 768px){
+  header {
+    width: 100%;
+    height: 50%;
+    margin-bottom: 10px;
+    
+}
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+}
+
+i {
+  color: #f7ebf2;
+}
+
+.header-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.header-icons:hover i.fa-instagram {
+  animation: translatey 0.7s infinite alternate;
+  color: rgb(238, 83, 186);
+}
+.header-icons:hover i.fa-facebook {
+  animation: translatey 0.9s infinite alternate;
+  color: rgb(24, 21, 235);
+}
+
+@keyframes translatey {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+.header-button {
+  border: 5px;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+  padding: 8px 24px;
+  border-radius: 8px;
+  color: #fff;
+  background-color: transparent;
+  transition: background-color 0.8s;
+}
+
+.header-button:hover {
+  border: 1px solid #d34040;
+  background-color: #d34040;
+}
+
+@media screen and (max-width: 768px) {
+  .header-content {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-content i {
+    margin-top: 16px;
+    font-size: 34px;
+  }
+}
+.container {
+  max-width: 770px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+.bg-home {
+  position: inherit;
+}
+.bg-home:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../assets/banner/pag.png");
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+}
+@media screen and (max-width: 768px){
+  .bg-home:before {
+    content: "";
+    display: flex;
+    position: absolute;
+    background-image: url("../assets/banner/pag.png");
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 30%;
+    z-index: -1;
+    background: size cover;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+  }
+  
+}
+.hero {
+  color: #f0d911;
+  text-shadow: #000 1px -1px 1px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+.hero h1 {
+  text-align: center;
+  line-height: 150%;
+  max-width: 940px;
+  font-size: 48px;
+}
+.hero p {
+  text-align: center;
+  margin: 14px 0;
+}
+
+.button-contact {
+  padding: 14px 28px;
+  color: #fff;
+  background-color: #d94140;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 14 0;
+  border-radius: 24px;
+}
+
+.button-contact:hover {
+  animation: scaleButton 0.8s alternate infinite;
+}
+
+@keyframes scaleButton {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+  }
+  .hero h1 {
+    font-size: 35px;
+    padding: 0 14px;
+    width: 100%;
+  }
+  p {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero h1 {
+    font-size: 10px;
+  }
+}
+.about {
+  background-color: rgb(247, 246, 246);
+  overflow: hidden;
+  color: #353436;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 7200px){
+  .hero {
+    color: #f0d911;
+    text-shadow: #000 1px -1px 1px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    background-size: 50%;
+}
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 34px 14px 64px 14px;
+}
+.about-content img {
+  max-width: 500px;
+}
+
+.about-content div {
+  flex: 1;
+}
+
+.about-description h2 {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+.about-description p {
+  margin-bottom: 14px;
+  line-height: 150%;
+}
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+}
+.serviçes {
+  background-color: #edeaef;
+  color: #232224;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.serviçes-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.servives-content p {
+  line-height: 150%;
+  margin-bottom: 14px;
+  text-align: center;
+  max-width: 780px;
+}
+
+.montagens {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 0 44px 34px 44px;
+}
+
+.montagem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.montagem img {
+  width: 100%;
+  max-width: 354px;
+  transition: transform 0.2s;
+}
+
+.montagem img:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.montagem-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  background-color: #fff;
+  z-index: 99;
+}
+
+.montagem-info button {
+  color: #fff;
+  background-color: #d94140;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 0;
+  cursor: default;
+}
+
+@media screen and (max-width: 768px) {
+  .montagens {
+    flex-direction: column;
+  }
+  .montagem img {
+    max-width: 300px;
+  }
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  gap: 5px;
+  color: #232224;
+}
+
+.log {
+  max-width: 350px;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 5px;
+  color: #353436;
+}
+
+.btn-whatssapp {
+  position: fixed;
+  bottom: 4px;
+  right: 8px;
+  z-index: 99;
+}
+.btn-whatssapp img {
+  max-width: 74px;
+  transition: transform 0.4s;
+}
+.btn-whatssapp img:hover {
+  transform: scale(1.1);
+}
+
+.btn-whatssapp .tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  width: 120px;
+  top: 8px;
+  left: -130px;
+  background-color: #353436;
+  color: #fff;
+  padding: 6px;
+  border-radius: 8px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.btn-whatssapp:hover .tooltip-text {
+  visibility: visible;
+  opacity: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-whatssapp img {
+    max-width: 54px;
+  }
+}
+body {
+  font-family: "sora", sans-serif;
+  width: 100;
+  height: 100vh;
+  position: relative;
+  background-color: #edeaef;
+}
+
+button {
+  font-family: "sora", sans-serif;
+  cursor: pointer;
+}
+
+svg {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+elfsight-app-53020910-9440-4c94-aeb7-cbf8a8efd1d4 {
+  width: 40px;
+}/*# sourceMappingURL=style.css.map */
